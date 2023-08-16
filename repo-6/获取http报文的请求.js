@@ -18,7 +18,7 @@ const server = http.createServer((requset,response)=>{
         body += chunk;
     })
     //绑定end事件
-    response.on('end',()=>{
+    requset.on('end',()=>{
         console.log(body)
         response.end('http')
     });
